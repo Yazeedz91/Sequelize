@@ -5,11 +5,13 @@ import apiRoutes from './routes/apiRoutes.js';
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+const staticFolder = 'public';
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/api', apiRoutes);
+app.use(express.static(staticFolder));
 
 async function bootServer() {
   try {
