@@ -22,12 +22,6 @@ window.onload = async function () {
         table.append(table_row);
     });
 
-    Object.keys(data).forEach((element) => {
-        Object.keys(element).forEach((hall) => {
-        
-        });
-    });
-
     // Create Chart
 
     const req_meals = await fetch('/api/meals')
@@ -35,13 +29,7 @@ window.onload = async function () {
     const meals = await req_meals.json()
     const macros = await req_macros.json()
 
-    console.log(meals)
-    console.log(macros)
     const [ten_meals, ten_macros] = get_ten_items(meals, macros)
-
-    console.log(ten_meals[0].meal_name)
-
-    console.log(ten_macros[0].calories)
 
     let chart = new CanvasJS.Chart("chart", {
         animationEnabled: true,
