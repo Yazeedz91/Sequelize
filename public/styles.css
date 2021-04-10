@@ -1,0 +1,16 @@
+h1 {
+    font-weight: 700;
+    padding-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.table {
+    margin: auto;
+    background-color: lightgray;
+}
+
+#chart {
+    margin: auto;
+    padding-bottom: 500px;
+}
