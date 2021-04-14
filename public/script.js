@@ -8,8 +8,6 @@ window.onload = async function () {
     const data = await request.json();
     const hall_array = data.data;
 
-    console.log(hall_array);
-
     hall_array.forEach((element) => {
         const hall_name = element.hall_name;
         const hall_loc = element.hall_address;
@@ -142,7 +140,6 @@ window.onload = async function () {
         {
             type: "stackedBar",
             name: "Fat",
-            showInLegend: "true",
             dataPoints: [
                 { label: ten_meals[0].meal_name, y: ten_macros[0].fat },
                 { label: ten_meals[1].meal_name, y: ten_macros[1].fat },
